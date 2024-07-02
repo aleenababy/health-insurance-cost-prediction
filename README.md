@@ -1,6 +1,6 @@
 # Health Insurance Cost Prediction
 
-A machine learning application to predict health insurance costs based on individual attributes. This project is built with Python and deployed using Streamlit.
+A machine learning application to predict health insurance costs based on individual attributes. This project is built with Python and deployed using Streamlit. Here is the link to the app: https://health-insurance-predictor-aleena.streamlit.app
 
 ## Table of Contents
 - [Introduction](#introduction)
