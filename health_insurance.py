@@ -1,15 +1,14 @@
 import streamlit as st
 import joblib
-
+import numpy as np
+import os
 def main():
-    html_temp = """
-    <div style = "background-color:lightblue;padding=16px">
-    <h2 style = "color:black";text-align:center> Health Insurance Cost Predictor
-    </div>
+    st.title("Health Insurance Cost Prediction")
     
-    """
-    st.markdown(html_temp, unsafe_allow_html=True)
-    model = joblib.load('model_joblib_gr')
+    # Example of using a relative path
+    model_path = os.path.join(os.path.dirname(__file__), 'model_joblib_gr')
+    model = joblib.load(model_path)
+    
     p1 = st.slider("Enter your age", 18, 100)
     s1 = st.selectbox('Sex',('Male', 'Female'))
     if s1 =='Male':
@@ -34,10 +33,20 @@ def main():
         p6 = 2
     else:
         p6 = 3
+        
+    # Debugging statements
+    print(f"Inputs: {p1}, {p2}, {p3}, {p4}, {p5}, {p6}")
+    input_data = np.array([[p1, p2, p3, p4, p5, p6]])
+    print(f"Input data shape: {input_data.shape}")
+
+    # Example result (replace with your prediction logic)
     if st.button("Predict"):
-        prediction = model.predict([[p1, p2, p3, p4, p5, p6]])   
-        st.balloons() 
-        st.success("your insurance cost is {} US Dollars".format(round(prediction[0],2)))
-    
+        try:
+            prediction = model.predict(input_data)
+            st.balloons() 
+            st.success(f"Your insurance cost is {round(prediction[0], 2)} US Dollars")
+        except Exception as e:
+            st.error(f"Error in prediction: {e}")
+
 if __name__ == '__main__':
     main()
