@@ -50,7 +50,7 @@ To run this application locally, follow these steps:
 
 4. **Run the Streamlit application:**
    ```bash
-   streamlit run app.py
+   streamlit run health_insurance.py
    ```
 
 ## Usage
