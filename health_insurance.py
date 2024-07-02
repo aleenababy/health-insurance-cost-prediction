@@ -9,7 +9,7 @@ def main():
     
     """
     st.markdown(html_temp, unsafe_allow_html=True)
-    model = joblib.load('/Users/aleenababy/Documents/GitHub/health-insurance-cost-prediction/model_joblib_gr')
+    model = joblib.load('model_joblib_gr')
     p1 = st.slider("Enter your age", 18, 100)
     s1 = st.selectbox('Sex',('Male', 'Female'))
     if s1 =='Male':
