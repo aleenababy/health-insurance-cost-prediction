@@ -90,6 +90,4 @@ Please ensure your code adheres to the project's coding standards and includes a
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 ## Contact
-For questions or feedback, feel free to reach out:
-
-- **Your Name**: [Dr. Aleena Baby](mailto:aleenababy839@gmail.com)
+For questions or feedback, feel free to reach out:[Dr. Aleena Baby](mailto:aleenababy839@gmail.com)
